@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="128" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="09n-x2-6ap">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="09n-x2-6ap" customClass="CategoryCell" customModule="CoderSwagApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="09n-x2-6ap" id="ew4-0N-fnS">
@@ -59,6 +59,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="L6P-Ag-VtL" secondAttribute="bottom" id="rw3-h0-S3m"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="L6P-Ag-VtL" id="ler-L7-QvE"/>
+                                            <outlet property="categoryTitle" destination="Cj7-cw-G8e" id="fHJ-Q7-OtC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -75,6 +79,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Coder Swag" id="Epi-5O-e5Z"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="sNI-ee-jj1" id="K5r-wI-GNl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
