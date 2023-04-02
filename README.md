@@ -1,2 +1,3 @@
 # Coder Swag App
-CoderSwagApp Swift 4.2 ile ile geliştirilen bir iOS 12 projesidir.
+
+CoderSwagApp is an iOS 12 project developed with Swift 4.2.
