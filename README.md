@@ -1,2 +1,2 @@
 # Coder Swag App 💻
-CoderSwagApp is an iOS project developed with Swift.
+Coder SwagApp is an iOS project developed with Swift.
