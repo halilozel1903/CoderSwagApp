@@ -1,54 +1,72 @@
-# Coder Swag App
+<p align="center">
 
-UIKit storyboard örneği. Uygulama, yazılımcı swag’i için **Shop By Category** ekranıyla açılır: şapkalar, hoodieler, tişörtler ve dijital ürünler.
+# Coder Swag
 
-## Teknoloji
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange?style=flat)](https://swift.org)
+[![iOS 16.0+](https://img.shields.io/badge/iOS-16.0%2B-blue?style=flat)](https://developer.apple.com/ios/)
+[![UIKit](https://img.shields.io/badge/UIKit-native-lightgrey?style=flat)](https://developer.apple.com/documentation/uikit)
 
-- Swift 5
-- UIKit ve storyboard
-- Dağıtım hedefi: iOS 16
-- Xcode 16 veya üzeri
+A UIKit storyboard sample that opens on a Shop By Category screen for coder swag (hats, hoodies, shirts, digital).
 
-## Gereksinimler
+</p>
 
-- macOS üzerinde Xcode 16 veya üzeri
-- iOS 16 veya üzeri bir simülatör
+## Overview
 
-## Çalıştırma
+Coder Swag is a UIKit storyboard sample for looking through coder swag by category: hats, hoodies, shirts, and digital items.
 
-1. Depoyu klonlayın.
-2. `CoderSwagApp.xcodeproj` dosyasını açın.
-3. Bir simülatör seçin.
-4. Run ile çalıştırın.
+The first screen is a navigation stack. An orange navigation bar is titled Coder Swag. Under it, a Shop By Category label sits above a full-width table. Each row is a tall image cell.
 
-## Proje düzeni
+## Features
 
-```
-CoderSwagApp.xcodeproj/
-CoderSwagApp/
-  AppDelegate.swift
-  Info.plist
-  Controller/
-    ViewController.swift
-  View/
-    CategoryCell.swift
-  Base.lproj/
-    Main.storyboard
-    LaunchScreen.storyboard
-  Assets.xcassets/
-    hats, hoodies, shirts, digital
-    hat01–hat04, hoodie01–hoodie04, shirt01–shirt05
-    AppIcon.appiconset
+- Orange navigation bar titled Coder Swag
+- Shop By Category label
+- Full-width table
+- Tall image cells with a centered title
+
+## Requirements
+
+| Requirement | Version |
+| --- | --- |
+| Xcode | 16 or later |
+| iOS | 16 or later |
+| Swift | 5 |
+
+## Getting Started
+
+```sh
+git clone https://github.com/halilozel1903/CoderSwagApp.git
+cd CoderSwagApp
+open CoderSwagApp.xcodeproj
 ```
 
-`Main.storyboard` bir navigasyon denetleyicisiyle başlar. Kök sahnenin başlığı Coder Swag’tir. Ekranda Shop By Category etiketi ve `categoryTable` çıkışına bağlı bir tablo vardır. Prototip hücre `CategoryCell`’dir; `categoryImage` ve `categoryTitle` bağlıdır. Hücredeki yer tutucu görsel `digital`, yer tutucu başlık HOODIES’tir.
+Select the CoderSwagApp scheme, an iOS 16+ simulator, and run.
 
-`LaunchScreen.storyboard` boş bir açılış ekranıdır. Varlık kataloğunda kategori görselleri (`hats`, `hoodies`, `shirts`, `digital`) ve ürün görselleri (`hat01`–`hat04`, `hoodie01`–`hoodie04`, `shirt01`–`shirt05`) vardır. `AppIcon.appiconset` yalnızca yuva tanımları içerir; ikon dosyası yoktur.
+## Project structure
 
-## Durum
+```text
+.
+├── CoderSwagApp.xcodeproj
+└── CoderSwagApp
+    ├── AppDelegate.swift
+    ├── Info.plist
+    ├── Controller
+    │   └── ViewController.swift
+    ├── View
+    │   └── CategoryCell.swift
+    ├── Base.lproj
+    │   ├── Main.storyboard
+    │   └── LaunchScreen.storyboard
+    └── Assets.xcassets
+```
 
-Kategori tablosu ve `CategoryCell` vardır. Tabloya veri kaynağı bağlanmamıştır. `ViewController` veri kaynağı veya delege uygulamaz. Ürün akışı yazılmamıştır.
+The catalog holds category images `hats`, `hoodies`, `shirts`, and `digital`, and product images `hat01`–`hat04`, `hoodie01`–`hoodie04`, and `shirt01`–`shirt05`.
 
-## Yazar
+## Current limitations
 
-Halil Özel
+- `ViewController` does not implement a table data source or delegate, so categories are not shown.
+- There is no product flow.
+- App icon slots have no image files.
+
+## Author
+
+[Halil Özel](https://github.com/halilozel1903)
