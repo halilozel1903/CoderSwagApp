@@ -1,54 +1,127 @@
-# Coder Swag App
+# Coder Swag
 
-UIKit storyboard örneği. Uygulama, yazılımcı swag’i için **Shop By Category** ekranıyla açılır: şapkalar, hoodieler, tişörtler ve dijital ürünler.
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.0-orange?style=flat-square)
+[![iOS 16.0+](https://img.shields.io/badge/iOS-16.0%2B-blue?style=flat-square)](https://img.shields.io/badge/iOS-16.0%2B-blue?style=flat-square)
+[![UIKit](https://img.shields.io/badge/UIKit-storyboards-lightgrey?style=flat-square)](https://img.shields.io/badge/UIKit-storyboards-lightgrey?style=flat-square)
 
-## Teknoloji
+A UIKit storyboard sample that opens on a Shop By Category screen for coder swag (hats, hoodies, shirts, digital).
 
-- Swift 5
-- UIKit ve storyboard
-- Dağıtım hedefi: iOS 16
-- Xcode 16 veya üzeri
+## Overview
 
-## Gereksinimler
+Coder Swag loads `Main.storyboard` from the classic `AppDelegate` lifecycle. The initial controller is a navigation stack with an orange bar and a white title, Coder Swag. Its root is `ViewController`. Below the bar, a label reads Shop By Category, and a plain table fills the safe area underneath. That table is connected to the `categoryTable` outlet.
 
-- macOS üzerinde Xcode 16 veya üzeri
-- iOS 16 veya üzeri bir simülatör
+The only prototype cell is `CategoryCell`, with a row height of 159. `categoryImage` is an image view pinned to the cell edges; the storyboard sets it to the `digital` asset. `categoryTitle` is a centered label over the image; the storyboard text is HOODIES. `ViewController` does not assign a data source or delegate, and `CategoryCell` does not set those outlets in code.
 
-## Çalıştırma
+## Features
 
-1. Depoyu klonlayın.
-2. `CoderSwagApp.xcodeproj` dosyasını açın.
-3. Bir simülatör seçin.
-4. Run ile çalıştırın.
+- A `UINavigationController` is the initial view controller, with `ViewController` as its root.
+- A Shop By Category label sits above the table.
+- The table is wired to the `categoryTable` outlet.
+- The prototype cell is `CategoryCell`, with `categoryImage` and `categoryTitle` outlets.
+- The asset catalog contains category images (`hats`, `hoodies`, `shirts`, `digital`) and product images (`hat01`–`hat04`, `hoodie01`–`hoodie04`, `shirt01`–`shirt05`).
 
-## Proje düzeni
+## Requirements
 
-```
-CoderSwagApp.xcodeproj/
-CoderSwagApp/
-  AppDelegate.swift
-  Info.plist
-  Controller/
-    ViewController.swift
-  View/
-    CategoryCell.swift
-  Base.lproj/
-    Main.storyboard
-    LaunchScreen.storyboard
-  Assets.xcassets/
-    hats, hoodies, shirts, digital
-    hat01–hat04, hoodie01–hoodie04, shirt01–shirt05
-    AppIcon.appiconset
+| | |
+| --- | --- |
+| Xcode | 16 or later |
+| iOS | 16 or later |
+| Swift | 5 |
+
+## Getting Started
+
+```sh
+git clone https://github.com/halilozel1903/CoderSwagApp.git
+cd CoderSwagApp
+open CoderSwagApp.xcodeproj
 ```
 
-`Main.storyboard` bir navigasyon denetleyicisiyle başlar. Kök sahnenin başlığı Coder Swag’tir. Ekranda Shop By Category etiketi ve `categoryTable` çıkışına bağlı bir tablo vardır. Prototip hücre `CategoryCell`’dir; `categoryImage` ve `categoryTitle` bağlıdır. Hücredeki yer tutucu görsel `digital`, yer tutucu başlık HOODIES’tir.
+Choose an iOS 16+ simulator and run.
 
-`LaunchScreen.storyboard` boş bir açılış ekranıdır. Varlık kataloğunda kategori görselleri (`hats`, `hoodies`, `shirts`, `digital`) ve ürün görselleri (`hat01`–`hat04`, `hoodie01`–`hoodie04`, `shirt01`–`shirt05`) vardır. `AppIcon.appiconset` yalnızca yuva tanımları içerir; ikon dosyası yoktur.
+## Project structure
 
-## Durum
+```text
+.
+├── README.md
+├── CoderSwagApp.xcodeproj
+│   ├── project.pbxproj
+│   └── project.xcworkspace
+│       ├── contents.xcworkspacedata
+│       └── xcshareddata
+│           └── IDEWorkspaceChecks.plist
+└── CoderSwagApp
+    ├── AppDelegate.swift
+    ├── Info.plist
+    ├── Controller
+    │   └── ViewController.swift
+    ├── View
+    │   └── CategoryCell.swift
+    ├── Base.lproj
+    │   ├── LaunchScreen.storyboard
+    │   └── Main.storyboard
+    └── Assets.xcassets
+        ├── Contents.json
+        ├── AppIcon.appiconset
+        │   └── Contents.json
+        ├── digital.imageset
+        │   ├── Contents.json
+        │   └── digital.png
+        ├── hats.imageset
+        │   ├── Contents.json
+        │   └── hats.png
+        ├── hoodies.imageset
+        │   ├── Contents.json
+        │   └── hoodies.png
+        ├── shirts.imageset
+        │   ├── Contents.json
+        │   └── shirts.png
+        ├── hat01.imageset
+        │   ├── Contents.json
+        │   └── hat01.jpg
+        ├── hat02.imageset
+        │   ├── Contents.json
+        │   └── hat02.jpg
+        ├── hat03.imageset
+        │   ├── Contents.json
+        │   └── hat03.jpg
+        ├── hat04.imageset
+        │   ├── Contents.json
+        │   └── hat04.jpg
+        ├── hoodie01.imageset
+        │   ├── Contents.json
+        │   └── hoodie01.jpg
+        ├── hoodie02.imageset
+        │   ├── Contents.json
+        │   └── hoodie02.jpg
+        ├── hoodie03.imageset
+        │   ├── Contents.json
+        │   └── hoodie03.jpg
+        ├── hoodie04.imageset
+        │   ├── Contents.json
+        │   └── hoodie04.jpg
+        ├── shirt01.imageset
+        │   ├── Contents.json
+        │   └── shirt01.jpg
+        ├── shirt02.imageset
+        │   ├── Contents.json
+        │   └── shirt02.jpg
+        ├── shirt03.imageset
+        │   ├── Contents.json
+        │   └── shirt03.jpg
+        ├── shirt04.imageset
+        │   ├── Contents.json
+        │   └── shirt04.jpg
+        └── shirt05.imageset
+            ├── Contents.json
+            └── shirt05.jpg
+```
 
-Kategori tablosu ve `CategoryCell` vardır. Tabloya veri kaynağı bağlanmamıştır. `ViewController` veri kaynağı veya delege uygulamaz. Ürün akışı yazılmamıştır.
+## Current limitations
 
-## Yazar
+- `ViewController` does not implement a table data source or delegate, so the table does not show the category catalog.
+- There is no product flow.
+- `AppIcon.appiconset` has slots but no image files.
 
-Halil Özel
+## Author
+
+[Halil Özel](https://github.com/halilozel1903)
