@@ -1,7 +1,7 @@
 <h1 align="center">Coder Swag</h1>
 
 <p align="center">
-  <a href="https://swift.org"><img alt="Swift 5.0" src="https://img.shields.io/badge/Swift-5.0-orange?style=flat"></a>
+  <a href="https://swift.org"><img alt="Swift 6.4" src="https://img.shields.io/badge/Swift-6.4-orange?style=flat"></a>
   <a href="https://developer.apple.com/ios/"><img alt="iOS 16.0+" src="https://img.shields.io/badge/iOS-16.0%2B-blue?style=flat"></a>
   <a href="https://developer.apple.com/documentation/uikit"><img alt="UIKit" src="https://img.shields.io/badge/UIKit-native-lightgrey?style=flat"></a>
 </p>
@@ -27,7 +27,9 @@ The first screen is a navigation stack. An orange navigation bar is titled Coder
 | --- | --- |
 | Xcode | 16 or later |
 | iOS | 16 or later |
-| Swift | 5 |
+| Swift | 6.4 |
+
+Xcode’s Swift Language Version for this release is Swift 6 (`SWIFT_VERSION = 6.0`).
 
 ## Getting Started
 
